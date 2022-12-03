@@ -1,4 +1,7 @@
-
+import Header from './componentes/Header';
+import Article from './componentes/Article';
+import Creation from './componentes/Creation';
+import Footer from './componentes/Footer';
 import './App.sass'
 
 function App() {
@@ -6,7 +9,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Ola mundo</h1>
+      <Header />
+      <Article />
+      <Creation />
+      <Footer />
     </div>
   )
 }
