@@ -1,0 +1,174 @@
+@use '../mixins'
+@use '../variables'
+
+
+
+
+
+header
+    background: linear-gradient(rgba(0,0 ,0 , .6), rgba(0,0 ,0 , .6)), url('/image/desktop/image-hero.jpg')
+    background-repeat: no-repeat
+    background-size: cover 
+    background-position: center top
+    height: 650px
+    @include mixins.mobile
+        background: linear-gradient(rgba(0,0 ,0 , .6), rgba(0,0 ,0 , .6)), url('/image/mobile/image-hero.jpg')
+        height: 600px
+    @include mixins.tablet
+        height: 600px
+    @include mixins.notepad
+        width: 100%   
+
+    .header__container
+        @include mixins.space
+        display: flex
+        justify-content: space-between
+
+        @include mixins.mobile
+            width: 90vw
+            margin: 0 auto
+        @include mixins.tablet
+            width: 90vw
+            margin: 0px auto
+        @include mixins.notepad
+            width: 90%      
+        
+        nav           
+            padding-left: 480px
+            padding-top: 5px
+
+            @include mixins.mobile
+                display: none
+            @include mixins.tablet
+                display: none
+            @include mixins.notepad
+                padding: 0px 
+                margin-top: 5px      
+
+
+            .menu__desktop--links
+                display: flex
+                align-content: space-between
+
+                @include mixins.mobile
+                    display: none
+                li
+                    list-style: none
+                a
+                    @include mixins.link--style  
+                    margin-left: 30px                    
+                    &:hover
+                        @include mixins.hover
+
+        .header--logo
+            @include mixins.mobile
+                width: 150px    
+            @include mixins.tablet
+                width: 180px    
+
+        // menu hamburguer 
+        .container__menu--mobile
+            display: none
+            @include mixins.mobile
+                display: block 
+            @include mixins.tablet
+                display: block  
+
+            .hamburger 
+                position: absolute
+                z-index: 100
+                top: 1rem
+                right: 1rem
+                margin: 40px 0px 0px 0px
+                padding: 4px
+                border: rgba(255, 255, 255, 0.00) solid 1px
+                background: rgba(255, 255, 255, 0.00)
+                color: variables.$primary-color
+                cursor: pointer
+                
+                @include mixins.tablet
+                    margin: 50px 20px 0px 0px
+                
+                .menuIcon
+                    font-size: 42px 
+
+                .closeIcon 
+                    font-size: 36px 
+                    display: none      
+
+            .menu 
+                position: fixed
+                transform: translateY(-100%)
+                transition: transform 0.2s
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                z-index: 99
+                background: variables.$black-color
+                color: variables.$primary-color
+                list-style: none
+                padding-top: 4rem
+
+                li
+                    margin: 30px 0px 20px 30px
+                    list-style: none
+
+                    img
+                        padding-bottom: 100px  
+                        position: relative
+                        bottom: 20px
+                    
+                    .menuItem
+                        color: variables.$primary-color
+                        text-decoration: none
+                        font-family: 'Josefin Sans', sans-serif
+                        font-weight: 300
+                        text-transform: uppercase
+                        font-size: 32px
+
+                        &:hover
+                            @include mixins.hover
+
+            .showMenu 
+                transform: translateY(0)
+
+    .header__container__text
+        width: 1050px
+        margin: 0 auto
+        @include mixins.mobile
+            width: 100%
+        @include mixins.tablet
+            width: 100%
+        @include mixins.notepad
+            width: 100%    
+
+        .header__text
+            width: 100% 
+            border: 3px solid variables.$primary-color
+            padding: 30px 0
+            font-family: 'Josefin Sans', sans-serif
+
+            @include mixins.mobile
+                width: 90%
+                margin: 0 auto
+            @include mixins.tablet
+                width: 90%
+                margin: 0 auto    
+            @include mixins.notepad
+                width: 90%
+                margin: 0 auto      
+
+            h1
+                color: variables.$primary-color
+                font-size: 65px
+                padding-left: 30px
+                font-weight: 300
+                text-transform: uppercase      
+
+                @include mixins.mobile
+                    font-size: 2em    
+                @include mixins.tablet
+                    font-size: 3rem    
+                @include mixins.notepad
+                    font-size: 4rem                

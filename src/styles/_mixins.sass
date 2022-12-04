@@ -1,0 +1,104 @@
+@use './variables'
+
+
+@mixin reset
+    *
+        margin: 0 
+        padding: 0
+        box-sizing: border-box
+
+
+
+@mixin hover
+    border-bottom:  2px solid variables.$primary-color
+    transition: .6s 
+
+
+@mixin space
+    width: 1040px
+    margin: 0px auto
+    padding: 70px 0px
+
+@mixin subtitulo
+    font-family: 'Josefin Sans', sans-serif
+    font-weight: 300
+    font-size: 42px
+    text-transform: uppercase          
+
+@mixin paragrafo-image
+    color: variables.$primary-color
+    font-size: 28px
+    padding: 320px 0px 20px 30px
+    width: 180px
+    text-transform: uppercase    
+
+
+@mixin hover__text--list
+    color: variables.$black-color         
+    transition: .6s  
+
+@mixin link--style
+    text-decoration: none
+    color: variables.$primary-color
+    font-family: 'Alata', sans-serif
+    font-size: 15px
+    border-bottom: 3px solid rgba(255,255, 255, .01)
+
+@mixin mobile--image
+    background-repeat: no-repeat
+    background-size: cover
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    
+    -o-background-size: cover
+    width: 80vw  
+    height: 130px
+    cursor: pointer 
+    margin-bottom: 20px   
+
+@mixin tablet--image
+    background-repeat: no-repeat
+    background-size: 100%
+    width: 80vw  
+    height: 130px
+    cursor: pointer 
+    margin-bottom: 20px 
+
+@mixin mobile--image--hover
+    background-repeat: no-repeat
+    background-size: 100%
+    width: 80vw  
+    height: 130px
+    cursor: pointer 
+    margin-bottom: 20px   
+
+
+
+@mixin btn--tablet      
+    position: relative
+    top: 1300px
+    width: 150px
+
+
+
+//mobile
+
+@mixin mobile
+    @media (max-width: 550px)
+        @content   
+
+
+
+// Tablet
+@mixin  tablet
+    @media (min-width: 551px) and (max-width: 800px)
+        @content   
+
+// Tablet
+@mixin  notepad
+    @media (min-width: 801px) and (max-width: 1200px)
+        @content      
+
+@mixin  notebook
+    @media (min-width: 801px) and (max-width: 1040px)
+        @content         
