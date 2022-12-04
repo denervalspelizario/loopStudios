@@ -5,9 +5,9 @@ const Article = () => {
   return (
     <main>
         <figure>
-            <img  class="main__image" src={ImageInteractive} alt="Homem branco loiro usando oculos de realidade virtual e se dirvetindo"/>
+            <img  className="main__image" src={ImageInteractive} alt="Homem branco loiro usando oculos de realidade virtual e se dirvetindo"/>
         </figure>
-        <article class="article__container">
+        <article className="article__container">
             <h2>O líder em</h2>
             <h2>Interações vr</h2>
             <p>Fundada em 2011, a Loopstudios vem produzindo projetos de realidade virtual de classe mundial para algumas das melhores empresas do mundo.

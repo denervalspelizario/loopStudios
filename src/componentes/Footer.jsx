@@ -7,10 +7,10 @@ import Instagram from '/image/icon-instagram.svg';
 const Footer = () => {
   return (
     <footer>
-        <div class="footer__container">
-            <div class="footer__nav">
+        <div className="footer__container">
+            <div className="footer__nav">
                 <figure>
-                    <img  class="header--logo" src="./img/logo.svg" alt="Logo loopStudio" title="loopStudio"/>
+                    <img  className="header--logo" src="./img/logo.svg" alt="Logo loopStudio" title="loopStudio"/>
                 </figure>
                 <nav>
                     <ul>
@@ -22,8 +22,8 @@ const Footer = () => {
                     </ul>
                 </nav>
             </div>
-            <div class="footer__nav">
-                <div class="footer__social--media">
+            <div className="footer__nav">
+                <div className="footer__social--media">
                     <ul>
                         <li><a href="#"><img src={Facebook} alt="facebook"/></a></li>
                         <li><a href="#"><img src={Twitter} alt="twitter"/></a></li>
