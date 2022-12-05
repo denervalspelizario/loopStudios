@@ -30,7 +30,7 @@ const Header = (props) => {
                 </button> 
                 <menu id="menu__responsive--links" className={props.openMode ? 'menu__open': 'menu__close'}>
                     <ul>
-                        <li><a class="menuLogo" href="#"><img  class="header--logo--menu" src={Logo} alt="Logo loopStudio" title="loopStudio"/></a></li>
+                        <li><a className="menuLogo" href="#"><img  className="header--logo--menu" src={Logo} alt="Logo loopStudio" title="loopStudio"/></a></li>
                         <li><a href="#">Sobre</a></li>
                         <li><a href="#">Carreiras</a></li>
                         <li><a href="#">Eventos</a></li>

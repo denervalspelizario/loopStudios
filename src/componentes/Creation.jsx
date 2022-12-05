@@ -5,7 +5,7 @@ const Creation = () => {
     <section className="section__creation">
         <div className="creation__text">
             <h3>Nossas criações</h3>
-            <a href="#"><p class="btn">Veja todos</p></a>
+            <a href="#"><p className="btn">Veja todos</p></a>
         </div>
         <div className="creation__image__container">
             <div className="creation__image--list">

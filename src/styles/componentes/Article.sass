@@ -1,0 +1,101 @@
+@use '../mixins'
+@use '../variables'
+
+main
+    display: flex
+    margin: 80px auto 0px auto 
+    @include mixins.space
+    @include mixins.mobile
+        flex-direction: column
+        width: 100%
+    @include mixins.tablet
+        flex-direction: column
+        width: 100%
+    @include mixins.notebook
+        flex-direction: column
+        width: 100%
+    
+    .main__image
+        width: 700px
+        @include mixins.mobile
+            width: 100vw
+            padding: 0px 20px           
+        @include mixins.tablet
+            width: 100vw
+            padding: 0px 20px 
+        @include mixins.notepad
+            width: 500px
+        @include mixins.notebook    
+            width: 100vw
+            padding: 0px 5vw     
+           
+    .article__container
+        background-color: variables.$primary-color   
+        position: relative
+        top: 200px
+        right: 150px
+        padding: 70px 0px 0px 70px
+        font-family: variables.$font-styles
+
+        @include mixins.mobile
+            top: 0px
+            right: 50px
+            text-align: justify
+            
+        @include mixins.tablet
+            top: 0px
+            right: 0px
+            text-align: justify
+        @include mixins.notepad
+           position: static
+           margin: 0px auto
+        @include mixins.notebook
+            top: 0px
+            right: 0px
+            text-align: justify  
+            width: 100vw
+            padding: 50px 5vw 0px 5vw     
+
+        h2
+            @include mixins.subtitulo    
+            width: 450px
+            text-align: center
+            
+            @include mixins.mobile
+                padding-left: 30px
+                font-size: 2rem 
+                text-align: center
+                width: 100%   
+            @include mixins.tablet
+                padding-right: 60px
+                font-size: 2rem 
+                text-align: center
+                width: 100%
+            @include mixins.notepad
+                width: 400px
+                text-align: center
+                font-size: 36px
+            @include mixins.notebook
+                padding-right: 60px
+                font-size: 2.4rem 
+                text-align: center
+                width: 100%    
+                
+        
+        p
+            padding-top: 30px
+            line-height: 25px
+            font-size: 14px
+            color: variables.$verydark-color
+            @include mixins.mobile
+                width: 90vw
+            @include mixins.tablet
+                width: 80vw
+            @include mixins.notepad
+                font-size: 14px
+                width: 100%
+            @include mixins.notebook
+                font-size: 16px
+                
+                
+
