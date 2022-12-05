@@ -113,18 +113,8 @@ header
                     
             .menu__open
                 display: block
-                position: fixed
-                transform: translateY(0)
-                transition: transform 0.8s
-                top: 0
-                left: 0
-                right: 0
-                bottom: 0
-                z-index: 99
-                background: variables.$black-color
-                color: variables.$primary-color
-                list-style: none
-                padding-top: 4rem
+                transform: translateY(0%)
+                @include mixins.menuResponsive
 
 
                 li
@@ -140,14 +130,33 @@ header
                         font-weight: 300
                         text-transform: uppercase
                         font-size: 32px
-                        border-bottom: 3px solid rgba(255,255, 255, .01)
+                        border-bottom: 3px solid variables.$black-color
 
                         &:hover
                             @include mixins.hover
 
             .menu__close    
-                display: none
+                display: block
                 transform: translateY(-100%)
+                @include mixins.menuResponsive
+                
+                li
+                    padding: 30px 0px 20px 30px
+                    list-style: none
+
+
+                    a
+
+                        color: variables.$primary-color
+                        text-decoration: none
+                        font-family: 'Josefin Sans', sans-serif
+                        font-weight: 300
+                        text-transform: uppercase
+                        font-size: 32px
+                        border-bottom: 3px solid variables.$black-color
+
+                        &:hover
+                            @include mixins.hover
                 
                 
                     
