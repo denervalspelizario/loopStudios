@@ -32,6 +32,14 @@ header
             margin: 0px auto
         @include mixins.notepad
             width: 90%      
+
+
+        .header--logo
+
+            animation: pulse-white 2s infinite
+
+            @keyframes pulse-white 
+                @include mixins.hover-pulse  
         
         nav           
             padding-left: 480px

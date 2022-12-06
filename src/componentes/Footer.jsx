@@ -3,6 +3,7 @@ import Facebook from '/image/icon-facebook.svg';
 import Twitter from '/image/icon-twitter.svg';
 import Pinterest from '/image/icon-pinterest.svg';
 import Instagram from '/image/icon-instagram.svg';
+import Logo from '/image/logo.svg'; 
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
         <div className="footer__container">
             <div className="footer__nav">
                 <figure>
-                    <img  className="header--logo" src="./img/logo.svg" alt="Logo loopStudio" title="loopStudio"/>
+                    <img  className="header--logo" src={Logo} alt="Logo loopStudio" title="loopStudio"/>
                 </figure>
                 <nav>
                     <ul>
