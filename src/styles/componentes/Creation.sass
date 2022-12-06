@@ -1,0 +1,254 @@
+@use '../mixins'
+@use '../variables'
+
+
+
+.section__creation
+    @include mixins.space
+    font-family: 'Josefin Sans', sans-serif
+    font-weight: 300
+    position: relative
+
+    @include mixins.mobile
+        width: 80vw
+        margin: 0 auto
+    @include mixins.tablet
+        width: 80vw
+        margin: 0 auto  
+    @include mixins.notepad
+        width: 90vw
+        margin: 0 auto        
+
+    .creation__text
+        display: flex
+        justify-content: space-between
+        margin-bottom: 50px
+        @include mixins.mobile
+            display: block
+            margin: 0px auto 30px auto
+            width: 80vw
+        @include mixins.tablet
+            display: block
+            margin: 0px auto 30px auto
+            width: 80vw    
+
+        h3
+            @include mixins.subtitulo  
+
+            @include mixins.mobile
+                font-size: 32px
+                text-align: center
+            @include mixins.tablet
+                font-size: 32px
+                text-align: center
+
+        a
+            text-decoration: none  
+            
+        .btn
+            color: variables.$primary-color
+            border: 1px solid variables.$black-color
+            justify-content: center
+            background-color: variables.$black-color    
+            text-transform: uppercase
+            font-size: 15px
+            padding: 10px 20px
+
+            @include mixins.mobile
+                @include mixins.btn--tablet  
+            @include mixins.tablet
+                @include mixins.btn--tablet        
+            &:hover
+                color: variables.$black-color
+                background-color: variables.$primary-color
+                transition: .3s
+            
+    .creation__image--list
+        display: flex
+        justify-content: space-between 
+        margin-bottom: 20px
+        @include mixins.mobile
+            flex-direction: column
+        @include mixins.tablet
+            flex-direction: column    
+
+        .image--list
+                background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/desktop/image-deep-earth.jpg')
+                background-repeat: no-repeat
+                background-size: 100% 405px 
+                width: 240px  
+                cursor: pointer   
+
+                @include mixins.mobile
+                    background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/mobile/image-deep-earth.jpg')
+                    @include mixins.mobile--image
+
+                @include mixins.tablet
+                    background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/mobile/image-deep-earth.jpg')
+                    @include mixins.mobile--image    
+
+                .text__image--list
+                    @include mixins.paragrafo-image
+                    @include mixins.mobile
+                        font-size: 28px    
+                        padding: 50px 0px 10px 20px   
+                         
+                    @include mixins.tablet
+                        font-size: 28px    
+                        padding: 50px 0px 10px 20px     
+
+        #list--1
+            &:hover
+                background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/desktop/image-deep-earth.jpg') 
+                @include mixins.mobile
+                    background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/mobile/image-deep-earth.jpg') 
+                    @include mixins.mobile--image
+                @include mixins.tablet
+                    background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/mobile/image-deep-earth.jpg')
+                    @include mixins.tablet--image
+                .text__image--list
+                    @include mixins.hover__text--list
+
+        #list--2
+            background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/desktop/image-night-arcade.jpg')
+            @include mixins.mobile
+                background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/mobile/image-night-arcade.jpg')
+                @include mixins.mobile--image
+            @include mixins.tablet
+                background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/mobile/image-night-arcade.jpg')
+                @include mixins.tablet--image    
+
+
+            &:hover
+                background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/desktop/image-night-arcade.jpg') 
+                @include mixins.mobile
+                    background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/mobile/image-night-arcade.jpg') 
+                    @include mixins.mobile--image
+                @include mixins.tablet
+                    background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/mobile/image-night-arcade.jpg') 
+                    @include mixins.tablet--image
+
+                .text__image--list
+                    @include mixins.hover__text--list
+               
+        #list--3
+            background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/desktop/image-soccer-team.jpg')
+            @include mixins.mobile
+                background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/mobile/image-soccer-team.jpg')
+                @include mixins.mobile--image
+            @include mixins.tablet
+                background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/mobile/image-soccer-team.jpg')
+                @include mixins.tablet--image
+
+            &:hover
+                background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/desktop/image-soccer-team.jpg') 
+                @include mixins.mobile
+                    background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/mobile/image-soccer-team.jpg')
+                    @include mixins.mobile--image
+                @include mixins.tablet
+                    background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/mobile/image-soccer-team.jpg')
+                    @include mixins.tablet--image
+
+
+                .text__image--list
+                    @include mixins.hover__text--list
+                  
+        #list--4
+            background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/desktop/image-grid.jpg')
+            @include mixins.mobile
+                background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/mobile/image-grid.jpg')
+                @include mixins.mobile--image
+            @include mixins.tablet
+                background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/mobile/image-grid.jpg')
+                @include mixins.tablet--image
+
+            &:hover
+                background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/desktop/image-grid.jpg') 
+                @include mixins.mobile
+                    background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/mobile/image-grid.jpg')
+                    @include mixins.mobile--image
+                @include mixins.tablet
+                    background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/mobile/image-grid.jpg')
+                    @include mixins.tablet--image   
+                .text__image--list
+                    @include mixins.hover__text--list
+              
+        #list--5
+            background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/desktop/image-from-above.jpg')
+            @include mixins.mobile
+                background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/mobile/image-from-above.jpg')
+                @include mixins.mobile--image
+            @include mixins.tablet
+                background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/mobile/image-from-above.jpg')
+                @include mixins.tablet--image
+
+            &:hover
+                background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/desktop/image-from-above.jpg')
+                @include mixins.mobile
+                    background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/mobile/image-from-above.jpg')
+                    @include mixins.mobile--image
+                @include mixins.tablet
+                    background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/mobile/image-from-above.jpg')
+                    @include mixins.tablet--image    
+                .text__image--list
+                    @include mixins.hover__text--list
+               
+        #list--6
+            background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/desktop/image-pocket-borealis.jpg')
+            @include mixins.mobile
+                background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/mobile/image-pocket-borealis.jpg')
+                @include mixins.mobile--image
+            @include mixins.tablet
+                background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/mobile/image-pocket-borealis.jpg')
+                @include mixins.tablet--image
+
+            &:hover
+                background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/desktop/image-pocket-borealis.jpg')
+                @include mixins.mobile
+                    background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/mobile/image-pocket-borealis.jpg')
+                    @include mixins.mobile--image
+                @include mixins.tablet
+                    background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/mobile/image-pocket-borealis.jpg')
+                    @include mixins.tablet--image    
+                .text__image--list
+                    @include mixins.hover__text--list
+               
+        #list--7
+            background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/desktop/image-curiosity.jpg')
+            @include mixins.mobile
+                background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/mobile/image-curiosity.jpg')
+                @include mixins.mobile--image
+            @include mixins.tablet
+                background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/mobile/image-curiosity.jpg')
+                @include mixins.tablet--image    
+
+            &:hover
+                background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/desktop/image-curiosity.jpg')
+                @include mixins.mobile
+                    background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/mobile/image-curiosity.jpg')
+                    @include mixins.mobile--image
+                @include mixins.tablet
+                    background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/mobile/image-curiosity.jpg')
+                    @include mixins.tablet--image    
+                .text__image--list
+                    @include mixins.hover__text--list
+               
+        #list--8
+            background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/desktop/image-fisheye.jpg')
+            @include mixins.mobile
+                background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/mobile/image-fisheye.jpg')
+                @include mixins.mobile--image
+            @include mixins.tablet
+                background: linear-gradient(rgba(0,0 ,0 , .4), rgba(0,0 ,0 , .4)), url('../image/mobile/image-fisheye.jpg')
+                @include mixins.tablet--image    
+            &:hover
+                background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/desktop/image-fisheye.jpg')
+                @include mixins.mobile
+                    background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/mobile/image-fisheye.jpg')
+                    @include mixins.mobile--image
+                @include mixins.tablet
+                    background: linear-gradient(rgba(255,221 ,188 , 0.8), rgba(255,221 ,188 , 0.8)), url('../image/mobile/image-fisheye.jpg')
+                    @include mixins.tablet--image    
+                .text__image--list
+                    @include mixins.hover__text--list                 
+        
